@@ -20,21 +20,20 @@
 				.then(function (data) {
 					appendData(data);
 				})
-				/*.catch(function (err) {
+				.catch(function (err) {
 					console.log("error: " + err);
-				});*/
+				});
 
 			function appendData(data) {
 				var mainContainer = document.querySelector("main");
-				for (let i = 0; i < data.length; i++) {
+				for (var i = 0; i < data.length; i++) {
 					var div = document.createElement("div");
-                    var p = document.createElement("p"); 
-					p.innerHTML = "Product Info: " + data[i].name + " " + data[i].price;
+					div.innerHTML = "Product Info: " + data[i].name + " " + data[i].price;
 					mainContainer.appendChild(div);
-                    div.appendChild(p);
 				}
 			}
 		</script>
 	</body>
 </html>
+
 
