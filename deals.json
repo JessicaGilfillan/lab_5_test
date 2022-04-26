@@ -1,0 +1,18 @@
+[
+    {
+        "quantityAvaible": "1",
+        "productName": "John",
+        "productDescription": "Doe",
+        "productImage" :  
+    },
+    {
+        "id": "2",
+        "firstName": "Mary",
+        "lastName": "Peterson"
+    },
+    {
+        "id": "3",
+        "firstName": "George",
+        "lastName": "Hansen"
+    }
+]

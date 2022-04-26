@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>COMP2112 - Lab 5 - Solution</title>
+	</head>
+	<body>
+		<header>
+			<h1>Weird Deals</h1>
+			<p>Your Go To Store for Weird Things</p>
+		</header>
+
+		<main>
+			<button>See Weird Deals</button>
+		</main>
+		<script>
+			fetch("https://jessicagilfillan.github.io/weirdDeals1/products.json")
+				.then(function (response) {
+					return response.json();
+				})
+				.then(function (data) {
+					appendData(data);
+				})
+				.catch(function (err) {
+					console.log("error: " + err);
+				});
+
+			function appendData(data) {
+				var mainContainer = document.querySelector("main");
+				for (var i = 0; i < data.length; i++) {
+					console.log(`Product ${data.name}`);
+					var div = document.createElement("div");
+					div.innerHTML = "Product Info: " + data[i].name + " " + data[i].price;
+					mainContainer.appendChild(div);
+				}
+			}
+		</script>
+	</body>
+</html>
